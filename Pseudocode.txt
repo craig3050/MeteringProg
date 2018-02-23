@@ -1,0 +1,35 @@
+Module 1: Import data to common database format.
+
+1) Open Excel file or text file
+2) Display sample data (i.e. first 10 lines)
+3) Ask user if they wish to select data from this tab
+4) If tab switched go to 2
+5) Lookup what the data is in each column (see if it is a time, or MPAN etc)
+6) Ask the user to confirm data within the other columns
+	Time
+	MPAN (if no MPAN present randomally generate a number per import)
+	Units
+	Value
+	Ignore
+	Meter Reference
+	Address
+	Service Type (water / gas / elec / heat etc)
+7) Check data for anomolies
+8) Add data into the database
+9) Assign day of the week to each entry
+10) Change to next tab / quit
+11) Export data to excel sheet (option)
+
+12) Clense data
+	Are addresses the same - just typed differently / typo
+	
+
+
+Module 2: Do stuff with the data. 
+
+1) Spit out a number of graphs (per meter number / MPAN number / Address)
+	Consumption over time (Select timescale)
+	Peak consumption (select period of days you wish to analysis around the peak)
+	Lowest consumption (select period of days you wish to analysis around the peak)
+	
+	
