@@ -28,9 +28,21 @@ def load_excel_file(file_path):
     while column_data != None:
         column_data = (worksheet.cell(row=1, column=column_number).value)
         column_number += 1
-        column_names.append(column_data)
 
-    print (column_names)
+
+#FIXME - change the print statement so it goes down a column with a gap after the last one.
+    column_number -=1 #remove one from the number as last value is always None
+    row_number = 5
+    for column_iteration in range(column_number):
+        column_names = [] #clear this again
+        column_iteration += 1
+        for row_iteration in range(row_number):
+            row_iteration +=1
+            column_data = (worksheet.cell(row=row_iteration, column=column_iteration).value)
+            column_names.append(column_data)
+        for item in column_names:
+            print (item)
+        print ("\n")
     input("Press Enter to exit")
 
 
