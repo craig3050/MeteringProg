@@ -21,17 +21,15 @@ def load_excel_file(file_path):
     sheet_select -= 1  # take 1 from the value as list addresses start from zero
     worksheet = workbook[sheet_names[sheet_select]]  # open the selected sheet
 
-    #Print all the column headings
+    #Find all the column headings
     column_data = ""
     column_names = []
     column_number = 1
     while column_data != None:
         column_data = (worksheet.cell(row=1, column=column_number).value)
         column_number += 1
-
-
-#FIXME - change the print statement so it goes down a column with a gap after the last one.
-    column_number -=1 #remove one from the number as last value is always None
+    #Print column headings and xNo rows
+    column_number -=2 #remove one from the number as last value is always None (and it adds one on the end for good measure)
     row_number = 5
     for column_iteration in range(column_number):
         column_names = [] #clear this again
@@ -44,6 +42,12 @@ def load_excel_file(file_path):
             print (item)
         print ("\n")
     input("Press Enter to exit")
+
+##Match type of data
+##Is in an MPAN, address etc
+##Manual option to select from list if it doesn't match or ignore 1-10 option
+
+
 
 
 if __name__ == '__main__':
